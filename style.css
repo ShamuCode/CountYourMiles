@@ -1,0 +1,608 @@
+@import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #f6f8fa;
+}
+
+body.dark-mode {
+  background: rgb(142, 142, 147);
+  color: #ffffff;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+body.dark-mode #map {
+  background: #1e1e1e;
+}
+
+.error-message {
+  background: rgba(255, 77, 77, 0.9);
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 2px 12px #0002;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  z-index: 11;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.error-message h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.error-message p {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2.5em;
+}
+
+/*.overlay-dark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}*/
+
+#photoModeOverlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.stats {
+  background: rgba(255, 255, 255, 0.90);
+  border-radius: 18px;
+  padding: 0.8em 1.2em;
+  display: flex;
+  gap: 2em;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1.2em;
+  box-shadow: 0 2px 12px #0002;
+  pointer-events: auto;
+  align-items: center;
+}
+
+body.dark-mode .stats {
+  background: rgb(38, 38, 38);
+  color: #ffffff;
+}
+
+.overlay-dark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+#addToHomeScreenMessage {
+  position: fixed;
+  font-size: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  border-radius: 12px;
+}
+
+#addToHomeScreenMessage button {
+  font-size: 45px;
+}
+
+#beforeWeStart {
+  position: fixed;
+  font-size: 30px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  border-radius: 12px;
+}
+
+#beforeWeStart button {
+  font-size: 35px;
+}
+
+.guide-menu {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 12px;
+  padding: 2em;
+  box-shadow: 0 2px 12px #0002;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+body.dark-mode .guide-menu {
+  background: rgb(38, 38, 38);
+  color: #ffffff;
+}
+
+.guide-menu h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.guide-menu h3 {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+
+.guide-menu p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.guide-menu ul {
+  text-align: left;
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.guide-menu li {
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+
+.guide-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#iosGuide,
+#androidGuide {
+  width: 100%;
+  text-align: left;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 1.5em;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  z-index: 3;
+}
+
+.apple-btn {
+  background: rgb(57, 123, 246);
+  color: #fff;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 12px;
+  padding: 0.8em 2.2em;
+  margin: 0.4em 0.2em;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #007aff22;
+  transition: background 0.15s;
+  pointer-events: auto;
+}
+
+body.dark-mode .apple-btn {
+  background: rgb(142, 142, 147);
+  color: #ffffff;
+}
+
+label {
+  cursor: pointer;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #e0e0e0;
+  color: #000000;
+  border-radius: 20px;
+  padding: 1.4em 1.2em;
+}
+
+body.dark-mode label {
+  background-color: rgb(142, 142, 147);
+  color: #ffffff;
+}
+
+/*.apple-btn:hover, .apple-btn:focus {
+  background: rgb(255, 38, 38);
+}*/
+
+body.dark-mode .apple-btn:hover,
+body.dark-mode .apple-btn:focus {
+  background: rgb(142, 142, 147);
+}
+
+#recap {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  right: 10%;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 18px;
+  padding: 1.2em;
+  margin-top: 2em;
+  box-shadow: 0 2px 12px #0002;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto;
+  font-size: 25px;
+}
+
+#recap button {
+  font-size: 35px;
+}
+
+body.dark-mode #recap {
+  background: rgb(142, 142, 147);
+}
+
+/*
+.session-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.session-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.session-item h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.session-item p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+*/
+
+.custom-pin .pin-circle {
+  width: 28px;
+  height: 28px;
+  background: rgb(57, 123, 246);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 2px rgba(0, 122, 255, 0.45);
+  margin: auto;
+}
+
+.settings-menu {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 2px 12px #0002;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  z-index: 11;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+body.dark-mode .settings-menu {
+  background: rgb(38, 38, 38);
+  color: #ffffff;
+}
+
+.settings-menu h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.settings-menu label {
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.recap-container {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 18px;
+  padding: 2em;
+  margin: 2em auto;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+body.dark-mode .recap-container {
+  background: rgb(38, 38, 38);
+  color: #ffffff;
+}
+
+.recap-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.recap-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.recap-label {
+  color: #555;
+}
+
+body.dark-mode .recap-label {
+  color: #fff;
+}
+
+.recap-value {
+  font-weight: bold;
+  color: #222;
+}
+
+body.dark-mode .recap-value {
+  color: #fff;
+}
+
+.recap-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .recap-image img {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.recap-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+details {
+  margin: 1em -1em;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+details summary {
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+body.dark-mode details {
+  background: rgb(38, 38, 38);
+  color: #ffffff;
+}
+
+@media (max-width: 1500px) {
+  .apple-btn {
+    font-size: 2em;
+    padding: 1.5em 2em;
+    border-radius: 15px;
+    width: 100%;
+    margin: 0.5em auto;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    padding: 2em 1em;
+    font-size: 1em;
+    font-weight: 600;
+    color: #222;
+    z-index: 2;
+    position: absolute;
+    top: 1em;
+    left: 5%;
+    right: 5%;
+    transform: scale(0.9);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .stats span {
+    font-size: 1.25em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  #beforeWeStart {
+    font-size: 1em;
+  }
+
+  #beforeWeStart button {
+    font-size: 1.2em;
+  }
+
+  #map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+  }
+
+  #recap {
+    top: auto;
+    left: 5%;
+    right: 5%;
+    font-size:  1em;
+    margin: 0 auto;
+    padding: 1em;
+    transform: scale(0.7);
+  }
+
+  .recap-item {
+    margin-bottom: 1em;
+  }
+
+  .recap-label {
+    font-size: 1em;
+  }
+
+  .recap-value {
+    font-size: 1.2em;
+  }
+
+  #recap button.apple-btn {
+    font-size: 1.2em;
+    padding: 0.4em 0.8em;
+    width: 100%;
+    max-width: 200px;
+    margin: 0.5em auto;
+  }
+
+  #addToHomeScreenMessage{
+    font-size: 1em;
+  }
+  #addToHomeScreenMessage button {
+    font-size: 1em;
+  }
+
+  #pinGuideOverlay {
+    font-size: 0.8em;
+  }
+
+  button.apple-btn {
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    width: 95%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .settings-menu {
+    width: 95%;
+    max-width: 600px;
+    padding: 2em;
+    font-size: 1.6em;
+    margin: 0 auto;
+  }
+
+  .error-message {
+    font-size: 1.8em;
+    padding: 2.5em;
+    border-radius: 20px;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  #toggleDarkMode {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  label {
+    font-size: 1.8em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+  }
+
+  input {
+    font-size: 2em;
+    padding: 1em;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  #recap {
+    font-size: 0.8em;
+  }
+}

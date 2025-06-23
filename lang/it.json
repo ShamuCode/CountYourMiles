@@ -1,0 +1,81 @@
+{
+  "confirmResetMess": "⚠ Attenzione, il viaggio precedente verrà azzerato. Sei sicuro di voler continuare?",
+  "startButton": "▶️ Avvia",
+  "stopButton": "⏹️ Ferma",
+  "resumeButton": "▶️ Riprendi",
+  "cancelButton": "❌ Annulla",
+  "fromJsonTitle": "Dal backup",
+  "restartBtn": "🔄 Ricomincia",
+  "settingsMenuTitle": "⚙️ Impostazioni",
+  "photoModeBtn": "📷 Modalità Foto",
+  "saveTripBtn": "💾 Salva",
+  "errorMessage": "❌ Accesso alla posizione negato: consenti l'accesso alla posizione per utilizzare il sito.",
+  "closeButton": "Chiudi",
+  "darkMode": "🌙 Modalità Scura",
+  "unitKm": "Chilometri",
+  "unitMiles": "Miglia",
+  "languageSelector": "Lingua",
+  "recapText": "Riepilogo del viaggio",
+  "recapStartTime": "🕘 Ora di partenza:",
+  "recapEndTime": "🕒 Ora di arrivo:",
+  "recapDistance": "🛞 Distanza:",
+  "recapDuration": "⏰ Durata:",
+  "aboutText": {
+    "title": "Informazioni su CountYourMiles",
+    "content": "CountYourMiles è un'applicazione web gratuita e open source per tracciare i tuoi viaggi a piedi, in bici o in auto.",
+    "author": "Creato con 💖 da ShamuLC (ShamuCode)",
+    "links": [
+      "<a href='./docs/terms-of-use.html' target='_blank'>Condizioni d'uso</a>",
+      "<a href='./docs/terms-of-use.html' target='_blank'>Politica sulla privacy</a>",
+      "<a href='./docs/copyright.html' target='_blank'>Copyright</a>"
+    ]
+  },
+  "addToHomeScreenTuto": "Aggiungi il sito alla schermata Home",
+  "addToHomeScreenMessageContent": {
+    "title": "📱 Aggiungi alla schermata Home",
+    "steps": [
+      "Su iOS 🍎: Tocca il pulsante Condividi in basso, poi seleziona Aggiungi a Home.",
+      "Su Android 🤖: Tocca il menu (⋮) in alto a destra, poi seleziona Aggiungi a Home."
+    ]
+  },
+  "saveTripGuideOverlay": {
+    "title": "💾 Come utilizzare il pulsante Salva",
+    "steps": [
+      "Premi il pulsante Salva per caricare l'ultimo viaggio.",
+      "Potrai ricaricarlo più tardi utilizzando il pulsante '📂'."
+    ]
+  },
+  "beforeWeStartContent": {
+    "title": "Prima di iniziare: Per il corretto funzionamento",
+    "steps": [
+      "Consenti l'accesso alla posizione per questo sito.",
+      "Collega il telefono o attiva la modalità risparmio energetico.",
+      "Per evitare che lo schermo si spenga, consulta la guida qui sotto."
+    ]
+  },
+  "pinGuideBtn": "Come bloccare un'app?",
+  "pinGuideOverlayTitle": "Blocca un'app sullo schermo del telefono",
+  "pinGuideOverlayContent": "Ecco una guida dettagliata per bloccare un'app sullo schermo del telefono, così lo schermo non si spegne.",
+  "iosGuide": {
+    "title": "Guida iOS (iPhone) 🍎",
+    "steps": [
+      "Apri Impostazioni > Accessibilità > Accesso Guidato.",
+      "Abilita Accesso Guidato.",
+      "Tocca Impostazioni codice per impostare un codice (semplice) e abilita Face ID/Touch ID.",
+      "Imposta Blocco automatico su 'Mai' o sulla durata massima.",
+      "Apri CountYourMiles.",
+      "Premi tre volte il tasto laterale o Home e seleziona Accesso Guidato.",
+      "Tocca Avvia in alto a destra."
+    ]
+  },
+  "androidGuide": {
+    "title": "Guida Android 🤖",
+    "steps": [
+      "Apri Impostazioni > Sicurezza > Blocco schermo.",
+      "Abilita il blocco schermo.",
+      "Apri CountYourMiles.",
+      "Apri il menu delle app recenti.",
+      "Tocca l'icona dell'app e poi Blocca."
+    ]
+  }
+}

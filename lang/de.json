@@ -1,0 +1,81 @@
+{
+  "confirmResetMess": "⚠ Achtung, deine vorherige Strecke wird zurückgesetzt. Bist du sicher, dass du fortfahren möchtest?",
+  "startButton": "▶️ Starten",
+  "stopButton": "⏹️ Stoppen",
+  "resumeButton": "▶️ Fortsetzen",
+  "cancelButton": "❌ Abbrechen",
+  "fromJsonTitle": "Aus dem Backup",
+  "restartBtn": "🔄 Neustarten",
+  "settingsMenuTitle": "⚙️ Einstellungen",
+  "photoModeBtn": "📷 Fotomodus",
+  "saveTripBtn": "💾 Speichern",
+  "errorMessage": "❌ Standortzugriff verweigert: Bitte erlaube den Standortzugriff, um die Seite zu nutzen.",
+  "closeButton": "Schließen",
+  "darkMode": "🌙 Dunkler Modus",
+  "unitKm": "Kilometer",
+  "unitMiles": "Meilen",
+  "languageSelector": "Sprache",
+  "recapText": "Streckenübersicht",
+  "recapStartTime": "🕘 Startzeit:",
+  "recapEndTime": "🕒 Endzeit:",
+  "recapDistance": "🛞 Distanz:",
+  "recapDuration": "⏰ Dauer:",
+  "aboutText": {
+    "title": "Über CountYourMiles",
+    "content": "CountYourMiles ist eine kostenlose und quelloffene Webanwendung, um deine Strecken zu Fuß, mit dem Fahrrad oder Auto zu verfolgen.",
+    "author": "Erstellt mit 💖 von ShamuLC (ShamuCode)",
+    "links": [
+      "<a href='./docs/terms-of-use.html' target='_blank'>Nutzungsbedingungen</a>",
+      "<a href='./docs/terms-of-use.html' target='_blank'>Datenschutzrichtlinie</a>",
+      "<a href='./docs/copyright.html' target='_blank'>Urheberrecht</a>"
+    ]
+  },
+  "addToHomeScreenTuto": "Website zum Startbildschirm hinzufügen",
+  "addToHomeScreenMessageContent": {
+    "title": "📱 Zum Startbildschirm hinzufügen",
+    "steps": [
+      "Auf iOS 🍎: Tippe unten auf Teilen und dann auf Zum Home-Bildschirm.",
+      "Auf Android 🤖: Tippe oben rechts auf das Menü (⋮) und dann auf Zum Startbildschirm hinzufügen."
+    ]
+  },
+  "saveTripGuideOverlay": {
+    "title": "💾 Wie man die Speichern-Taste benutzt",
+    "steps": [
+      "Drücke auf die Speichern-Taste, um die letzte Strecke zu speichern.",
+      "Du kannst sie später mit der Taste '📂' wieder laden."
+    ]
+  },
+  "beforeWeStartContent": {
+    "title": "Bevor wir starten: Für die richtige Funktion",
+    "steps": [
+      "Erlaube den Standortzugriff für diese Seite.",
+      "Schließe dein Handy an oder aktiviere den Energiesparmodus.",
+      "Um zu verhindern, dass der Bildschirm ausgeht, siehe untenstehende Anleitung."
+    ]
+  },
+  "pinGuideBtn": "Wie pinne ich eine App?",
+  "pinGuideOverlayTitle": "Eine App auf dem Bildschirm deines Handys anheften",
+  "pinGuideOverlayContent": "Hier findest du eine detaillierte Anleitung, wie du eine App auf dem Bildschirm deines Handys anheftest, damit der Bildschirm nicht ausgeht.",
+  "iosGuide": {
+    "title": "iOS-Anleitung (iPhone) 🍎",
+    "steps": [
+      "Öffne Einstellungen > Bedienungshilfen > Geführter Zugriff.",
+      "Aktiviere Geführten Zugriff.",
+      "Tippe auf Code-Einstellungen, um einen (einfachen) Code festzulegen und Face ID/Touch ID zu aktivieren.",
+      "Stelle Automatische Sperre auf 'Nie' oder die maximale Dauer.",
+      "Öffne CountYourMiles.",
+      "Drücke dreimal auf die Seiten- oder Home-Taste und wähle Geführter Zugriff.",
+      "Tippe oben rechts auf Start."
+    ]
+  },
+  "androidGuide": {
+    "title": "Android-Anleitung 🤖",
+    "steps": [
+      "Öffne Einstellungen > Sicherheit > Bildschirm fixieren.",
+      "Aktiviere Bildschirm fixieren.",
+      "Öffne CountYourMiles.",
+      "Öffne das Menü der letzten Apps.",
+      "Tippe auf das App-Symbol und dann auf Fixieren."
+    ]
+  }
+}

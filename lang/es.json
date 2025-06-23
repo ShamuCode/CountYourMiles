@@ -1,0 +1,81 @@
+{
+  "confirmResetMess": "⚠ Atención, tu trayecto anterior se restablecerá. ¿Estás seguro de que quieres continuar?",
+  "startButton": "▶️ Iniciar",
+  "stopButton": "⏹️ Detener",
+  "resumeButton": "▶️ Reanudar",
+  "cancelButton": "❌ Cancelar",
+  "fromJsonTitle": "Desde la copia de seguridad",
+  "restartBtn": "🔄 Reiniciar",
+  "settingsMenuTitle": "⚙️ Configuración",
+  "photoModeBtn": "📷 Modo Foto",
+  "saveTripBtn": "💾 Guardar",
+  "errorMessage": "❌ Acceso a la ubicación denegado: permite el acceso a la ubicación para usar el sitio.",
+  "closeButton": "Cerrar",
+  "darkMode": "🌙 Modo Oscuro",
+  "unitKm": "Kilómetros",
+  "unitMiles": "Millas",
+  "languageSelector": "Idioma",
+  "recapText": "Resumen del trayecto",
+  "recapStartTime": "🕘 Hora de inicio:",
+  "recapEndTime": "🕒 Hora de llegada:",
+  "recapDistance": "🛞 Distancia:",
+  "recapDuration": "⏰ Duración:",
+  "aboutText": {
+    "title": "Acerca de CountYourMiles",
+    "content": "CountYourMiles es una aplicación web gratuita y de código abierto para registrar tus trayectos a pie, en bicicleta o en coche.",
+    "author": "Creado con 💖 por ShamuLC (ShamuCode)",
+    "links": [
+      "<a href='./docs/terms-of-use.html' target='_blank'>Condiciones de uso</a>",
+      "<a href='./docs/terms-of-use.html' target='_blank'>Política de privacidad</a>",
+      "<a href='./docs/copyright.html' target='_blank'>Derechos de autor</a>"
+    ]
+  },
+  "addToHomeScreenTuto": "Añadir el sitio a la pantalla de inicio",
+  "addToHomeScreenMessageContent": {
+    "title": "📱 Añadir a la pantalla de inicio",
+    "steps": [
+      "En iOS 🍎: Pulsa el botón Compartir en la parte inferior y selecciona Añadir a pantalla de inicio.",
+      "En Android 🤖: Pulsa el menú (⋮) arriba a la derecha y selecciona Añadir a pantalla de inicio."
+    ]
+  },
+  "saveTripGuideOverlay": {
+    "title": "💾 Cómo usar el botón Guardar",
+    "steps": [
+      "Pulsa el botón Guardar para cargar el último trayecto.",
+      "Podrás recargarlo más tarde usando el botón '📂'."
+    ]
+  },
+  "beforeWeStartContent": {
+    "title": "Antes de empezar: Para un buen funcionamiento",
+    "steps": [
+      "Permite el acceso a la ubicación para este sitio.",
+      "Conecta tu teléfono o activa el modo ahorro de energía.",
+      "Para evitar que la pantalla se apague, consulta la guía a continuación."
+    ]
+  },
+  "pinGuideBtn": "¿Cómo fijar una app?",
+  "pinGuideOverlayTitle": "Fijar una app en la pantalla de tu teléfono",
+  "pinGuideOverlayContent": "Aquí tienes una guía detallada para fijar una app en la pantalla de tu teléfono y evitar que la pantalla se apague.",
+  "iosGuide": {
+    "title": "Guía iOS (iPhone) 🍎",
+    "steps": [
+      "Abre Ajustes > Accesibilidad > Acceso guiado.",
+      "Activa Acceso guiado.",
+      "Pulsa Configuración de código para establecer un código (simple) y activa Face ID/Touch ID.",
+      "Ajusta el bloqueo automático en 'Nunca' o la duración máxima.",
+      "Abre CountYourMiles.",
+      "Pulsa tres veces el botón lateral o de inicio y selecciona Acceso guiado.",
+      "Pulsa Iniciar arriba a la derecha."
+    ]
+  },
+  "androidGuide": {
+    "title": "Guía Android 🤖",
+    "steps": [
+      "Abre Ajustes > Seguridad > Fijar pantalla.",
+      "Activa fijar pantalla.",
+      "Abre CountYourMiles.",
+      "Abre el menú de aplicaciones recientes.",
+      "Pulsa el icono de la app y luego Fijar."
+    ]
+  }
+}

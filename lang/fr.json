@@ -1,0 +1,84 @@
+{
+    "confirmResetMess": "⚠ Attention, votre précédent trajet va être réinitialisée. Êtes-vous sûr de vouloir continuer ?",
+    "startButton": "▶️ Démarrer",
+    "stopButton": "⏹️ Arrêter",
+    "resumeButton": "▶️ Reprendre",
+    "cancelButton": "❌ Annuler",
+    "fromJsonTitle": "Depuis la sauvegarde",
+    "restartBtn": "🔄 Recommencer",
+    "settingsMenuTitle": "⚙️ Paramètres",
+    "photoModeBtn": "📷 Mode Photo",
+    "saveTripBtn": "💾 Sauvegarder",
+    "errorMessage": "❌ Accès à la localisation refusé : Veuillez autoriser l'accès à la localisation pour utiliser le site.",
+    "closeButton": "Fermer",
+    "darkMode": "🌙 Mode Sombre",
+    "unitKm": "Kilomètres",
+    "unitMiles": "Miles",
+    "languageSelector": "Langue",
+    "recapText": "Résumé du trajet",
+    "recapStartTime": "🕘 Heure de départ :",
+    "recapEndTime": "🕒 Heure d'arrivée :",
+    "recapDistance": "🛞 Distance :",
+    "recapDuration": "⏰ Durée :",
+    "aboutText": {
+        "title": "À propos de CountYourMiles",
+        "content": "CountYourMiles est une application web gratuite et open source pour suivre vos trajets à pied, à vélo ou en voiture.",
+        "author": "Créé avec 💖 by ShamuLC (ShamuCode)",
+        "links": [
+            "<a href='./docs/terms-of-use.html' target='_blank'>Conditions d'utilisation</a>",
+            "<a href='./docs/terms-of-use.html' target='_blank'>Politique de confidentialité</a",
+            "<a href='./docs/copyright.html' target='_blank'>Copyright</a>"
+        ]
+    },
+    "termsOfUse": "Conditions d'utilisation",
+    "privacyPolicy": "Politique de confidentialité",
+    "copyright": "Droits d'auteur",
+    "addToHomeScreenTuto": "Ajouter le site à vos applications",
+    "addToHomeScreenMessageContent": {
+        "title": "📱 Ajouter à l'écran d'accueil",
+        "steps": [
+            "Sur iOS 🍎 : Appuyez sur le bouton <b>Partager</b> en bas de l'écran, puis sélectionnez <b>Ajouter à l'écran d'accueil</b>.",
+            "Sur Android 🤖 : Appuyez sur le menu (⋮) en haut à droite, puis sélectionnez <b>Ajouter à 'écran d'accueil</b>."
+        ]
+    },
+    "saveTripGuideOverlay": {
+        "title": "💾 Comment utiliser le bouton Sauvegarder",
+        "steps": [
+            "Appuyez sur le bouton Sauvegarder pour charger le dernier trajet.",
+            "Vous pourrez le recharger plus tard en utilisant le bouton '📂'."
+        ]
+    },
+    "beforeWeStartContent": {
+        "title": "Avant de commencer : Pour un bon fonctionnement",
+        "steps": [
+            "Autorisez l'accès à la localisation pour ce site.",
+            "Branchez votre téléphone ou activer le mode économie d'énergie.",
+            "Pour éviter que l'écran ne s'éteigne, consultez le guide ci-dessous."
+        ]
+    },
+    "pinGuideBtn": "Comment épingler une application ?",
+    "pinGuideOverlayTitle": "Épingler une application sur l'écran de votre téléphone",
+    "pinGuideOverlayContent": "Voici un guide précis pour épingler une application sur l’écran de votre téléphone, afin qu’il soit que l’écran ne s’éteigne pas.",
+    "iosGuide": {
+        "title": "Guide iOS (iPhone) 🍎",
+        "steps": [
+            "Ouvrez Réglages > Accessibilité > Accès guidé.",
+            "Activez Accès guidé.",
+            "Appuyez sur Réglages du code pour définir un code (simple) et activez Face ID/Touch ID.",
+            "Réglez Verrouillage auto. de l’écran sur « Jamais » ou la durée maximale.",
+            "Ouvrez CountYourMiles.",
+            "Appuyez trois fois sur le bouton latéral ou principal et sélectionnez Accès Guidé.",
+            "Appuyez sur Démarrer en haut à droite."
+        ]
+    },
+    "androidGuide": {
+        "title": "Guide Android 🤖",
+        "steps": [
+            "Ouvrez Paramètres > Sécurité > Épinglage d’écran.",
+            "Activez l’épinglage d’écran.",
+            "Ouvrez CountYourMiles.",
+            "Ouvrez le menu des applications récentes.",
+            "Appuyez sur l’icône de l’application puis sur Épingler."
+        ]
+    }
+}

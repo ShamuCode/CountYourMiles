@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wiki Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            color: #1e1e1e;
+            line-height: 1.6;
+        }
+
+        button {
+            display: inline-block;
+            margin-left: 2rem;
+            padding: 0.5em 1.2em;
+            font-size: 1.1rem;
+            background: #007aff;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            vertical-align: middle;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #212529;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid #ced4da;
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            padding-left: 0.75rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #343a40;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            color: #495057;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .image-container img {
+            max-width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="text-align: center; margin-bottom: 2rem;">
+        <img src="../img/Logo.png" alt="Logo CountYourMiles"
+            style="height: 80px; vertical-align: middle; margin-right: 1rem;">
+        <span style="font-size: 2.2rem; font-weight: 700; vertical-align: middle;">CountYourMiles</span>
+        <a href="../index.html"
+            style="display: inline-block; margin-left: 2rem; padding: 0.5em 1.2em; font-size: 1.1rem; background: #007aff; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; vertical-align: middle;">🏠
+            Home</a>
+    </header>
+    <section>
+        <h2>Privacy Policy</h2>
+        <p>
+            <strong>CountYourMiles</strong> is a trip tracking application that works without registration, without ads,
+            and without commercial collection of personal data. All features are accessible without authentication.
+        </p>
+        <h3>1. Local operation and processed data</h3>
+        <ul>
+            <li>
+                Your trip data (GPS positions, distance, duration, times) is processed only in your browser to display
+                your route, calculate statistics, and generate a local backup file (JSON) if you choose to export your
+                data.
+            </li>
+            <li>
+                This data is never sent to a third-party server by the application itself. It only leaves your device if
+                you manually export a trip file.
+            </li>
+        </ul>
+        <h3>2. Geolocation</h3>
+        <ul>
+            <li>
+                The application uses your browser's geolocation API to track your movements and display your position on
+                the map in real-time.
+            </li>
+            <li>
+                GPS coordinates are neither stored on a remote server nor shared with the site publisher. They are used
+                only for the current session or saved in a local file at your request.
+            </li>
+        </ul>
+        <h3>3. Mapping and third-party services</h3>
+        <ul>
+            <li>
+                Map backgrounds are provided by external services such as <strong>OpenStreetMap</strong> and
+                <strong>Esri</strong>, via the Leaflet library. When the map is displayed, your browser makes requests
+                to these services to load map tiles.
+            </li>
+            <li>
+                These requests may transmit technical information (IP address, browser type, etc.) to map providers,
+                according to their own privacy policies.
+                <ul>
+                    <li>
+                        <strong>OpenStreetMap:</strong> see the
+                        <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank"
+                            rel="noopener">OpenStreetMap
+                            Privacy Policy</a>
+                        for their practices regarding the collection and use of personal data.
+                    </li>
+                    <li>
+                        <strong>Esri:</strong> see the
+                        <a href="https://www.esri.com/en-us/privacy/privacy-statements/privacy-statement"
+                            target="_blank" rel="noopener">Esri Privacy Statement</a>
+                        for more information on data management when using their mapping services.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                The application does not include any advertising or behavioral tracking scripts.
+            </li>
+        </ul>
+        <h3>4. Hosting on GitHub Pages</h3>
+        <ul>
+            <li>
+                The site is hosted on GitHub Pages. By accessing the site, certain technical data (IP address,
+                connection
+                logs, etc.) may be collected by GitHub for security, maintenance, or statistical purposes.
+            </li>
+            <li>
+                For more information on the processing of this data, see the
+                <a href="https://docs.github.com/privacy" target="_blank" rel="noopener">GitHub Privacy Statement</a>.
+            </li>
+        </ul>
+        <h3>5. Technical features</h3>
+        <ul>
+            <li>
+                A service worker is used to enable app functionality and speed up site loading. It does not collect or
+                transmit any personal data.
+            </li>
+            <li>
+                Your preferences (language, theme, units) are stored locally in your browser to personalize your
+                experience.
+            </li>
+            <li>
+                You can save your trips as a JSON file. This file is never automatically sent to a server: it remains on
+                your device unless you share it yourself.
+            </li>
+        </ul>
+        <h3>6. Your rights</h3>
+        <ul>
+            <li>
+                You retain control over all your trip data. You can export, delete, or reset the application at any
+                time.
+            </li>
+            <li>
+                Since the site publisher does not have access to any personal data, they cannot respond to requests for
+                access, rectification, or deletion of data.
+            </li>
+        </ul>
+        <h3>7. Contact and updates</h3>
+        <ul>
+            <li>
+                For any questions about privacy, contact the publisher via the project's GitHub page (available by
+                selecting the logo on the site).
+            </li>
+        </ul>
+
+        <h4>Last updated: 06/20/25</h4>
+    </section>
+</body>
+
+</html>

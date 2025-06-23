@@ -1,0 +1,81 @@
+{
+    "confirmResetMess": "⚠ Warning, your previous trip will be reset. Are you sure you want to continue?",
+    "startButton": "▶️ Start",
+    "stopButton": "⏹️ Stop",
+    "resumeButton": "▶️ Resume",
+    "cancelButton": "❌ Cancel",
+    "fromJsonTitle": "From the backup",
+    "restartBtn": "🔄 Restart",
+    "settingsMenuTitle": "⚙️ Settings",
+    "photoModeBtn": "📷 Photo Mode",
+    "saveTripBtn": "💾 Save",
+    "errorMessage": "❌ Location access denied: Please allow location access to use the site.",
+    "closeButton": "Close",
+    "darkMode": "🌙 Dark Mode",
+    "unitKm": "Kilometers",
+    "unitMiles": "Miles",
+    "languageSelector": "Language",
+    "recapText": "Trip Recap",
+    "recapStartTime": "🕘 Start Time:",
+    "recapEndTime": "🕒 End Time:",
+    "recapDistance": "🛞 Distance:",
+    "recapDuration": "⏰ Duration:",
+    "aboutText": {
+        "title": "About CountYourMiles",
+        "content": "CountYourMiles is a free and open-source web application to track your trips on foot, by bike, or by car.",
+        "author": "Created with 💖 by ShamuLC (ShamuCode)",
+        "links": [
+            "<a href='./docs/terms-of-use.html' target='_blank'>Terms of Use</a>",
+            "<a href='./docs/privacy-policy.html' target='_blank'>Privacy Policy</a>",
+            "<a href='./docs/copyright.html' target='_blank'>Copyright</a>"
+        ]
+    },
+    "addToHomeScreenTuto": "Add the website to your Home Screen",
+    "addToHomeScreenMessageContent": {
+        "title": "📱 Add to Home Screen",
+        "steps": [
+            "On iOS 🍎: Tap the <b>Share</b> button at the bottom of the screen, then select <b>Add to Home Screen</b>.",
+            "On Android 🤖: Tap the menu (⋮) at the top right, then select <b>Add to Home Screen</b>."
+        ]
+    },
+    "saveTripGuideOverlay": {
+        "title": "💾 How to use the Save button",
+        "steps": [
+            "Press the Save button to save your last trip.",
+            "You can reload it later using the '📂' button."
+        ]
+    },
+    "beforeWeStartContent": {
+        "title": "Before we start: For proper functioning",
+        "steps": [
+            "Allow location access for this site.",
+            "Plug in your phone or activate power-saving mode.",
+            "To prevent the screen from turning off, check the guide below."
+        ]
+    },
+    "pinGuideBtn": "How to pin an app?",
+    "pinGuideOverlayTitle": "Pin an app to your phone screen",
+    "pinGuideOverlayContent": "Here is a detailed guide to pin an app to your phone screen, so the screen does not turn off.",
+    "iosGuide": {
+        "title": "iOS Guide (iPhone) 🍎",
+        "steps": [
+            "Open Settings > Accessibility > Guided Access.",
+            "Enable Guided Access.",
+            "Tap Passcode Settings to set a (simple) passcode and enable Face ID/Touch ID.",
+            "Set Auto-Lock to 'Never' or the maximum duration.",
+            "Open CountYourMiles.",
+            "Press the side or home button three times and select Guided Access.",
+            "Tap Start at the top right."
+        ]
+    },
+    "androidGuide": {
+        "title": "Android Guide 🤖",
+        "steps": [
+            "Open Settings > Security > Screen Pinning.",
+            "Enable screen pinning.",
+            "Open CountYourMiles.",
+            "Open the recent apps menu.",
+            "Tap the app icon then select Pin."
+        ]
+    }
+}

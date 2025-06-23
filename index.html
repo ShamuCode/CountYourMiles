@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CountYourMiles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple and free web application to record and display your trips.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/Logo.png" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#007aff">
+</head>
+
+<body>
+    <div id="map"></div>
+    <div class="overlay">
+        <div id="stats" class="stats">
+            <input type="file" id="loadTripInput" style="display:none;" />
+            <img id="logo" src="img/Logo.png" alt="CountYourMiles Logo" style="height: 100px;">
+            <span>
+                <span id="distance">🛞 0,00 km</span>
+                <em><span id="startTime" style="display: none;"></span></em>
+            </span>
+            <span>
+                <span>-</span>
+            </span>
+            <span>
+                <span id="duration">⏰ 00 h 00 min 00 s</span>
+                <em><span id="stopTime" style="display: none;"></span></em>
+            </span>
+        </div>
+
+        <div id="about" class="overlay-dark" style="display: none; font-size: 30px;">
+            <div id="aboutText" class="guide-menu">
+                <h2 id="aboutTitle"></h2>
+                <p id="aboutContent"></p>
+                <p id="aboutAuthor"></p>
+                <class style="text-decoration: underline; font-size: 45x;">
+                    <div id="aboutTextLinks">
+                        <ul>
+                            <a href="./docs/terms-of-use.html">
+                                <li>Terms of Use</li>
+                            </a>
+                            <a href="./docs/privacy-policy.html">
+                                <li>Privacy Policy</li>
+                            </a>
+                            <a href="./docs/copyright.html">
+                                <li>Copyright</li>
+                            </a>
+                        </ul>
+                    </div>
+                </class>
+                <p style="gap: 10px;">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                        alt="GitHub Logo" style="height: 30px;">
+                    <a href="https://github.com/ShamuCode/"
+                        style="text-decoration: underline; font-size: 45px;">GitHub</a>
+                </p>
+                <button id="closeAboutBtn" class="apple-btn" style="padding: 0.5em 2em;">Fermer</button>
+            </div>
+        </div>
+
+        <div id="addToHomeScreenOverlay" class="stats" style="display: none; margin-top: 9em;">
+            <em><span id="addToHomeScreenTuto" style="color: gray; font-size: 35px; text-decoration: underline;">Ajouter
+                    le site à vos applications</span></em>
+        </div>
+
+        <div id="addToHomeScreenMessage" class="overlay-dark" style="display: none;">
+            <div class="guide-menu">
+                <div id="addToHomeScreenMessageContent">
+                    <h2></h2>
+                    <ul>
+                        <li> </li>
+                        <li></li>
+                    </ul>
+                </div>
+                <button id="closeAddToHomeScreenMessage" class="apple-btn" style="padding: 0.5em 2em;"></button>
+            </div>
+        </div>
+
+        <div id="beforeWeStart" class="overlay-dark" style="display: none;">
+            <div class="guide-menu">
+                <div id="beforeWeStartContent">
+                    <h2></h2>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <button id="pinGuideBtn" class="apple-btn" style="padding: 0.5em 2em;"></button>
+                <button id="startBtn" class="apple-btn" style="padding: 0.5em 2em; margin-top: 1em;"></button>
+                <button id="cancelBtnBWS" class="apple-btn"
+                    style="padding: 0.5em 2em; background-color: rgb(232, 77, 61);"></button>
+            </div>
+        </div>
+
+        <div id="pinGuideOverlay" class="overlay-dark" style="display: none;">
+            <div class="guide-menu">
+                <h2></h2>
+                <p></p>
+                <button id="openiosGuideBtn" class="apple-btn"
+                    style="padding: 0.5em 2em; margin-top: 1em">iPhone (iOS)</button>
+                <button id="openAndroidGuideBtn" class="apple-btn"
+                    style="padding: 0.5em 2em; margin-top: 1em;">Android</button>
+
+                <div id="iosGuide" style="display: none;">
+                    <h3></h3>
+                    <ul></ul>
+                </div>
+
+                <div id="androidGuide" style="display: none;">
+                    <h3></h3>
+                    <ul></ul>
+                </div>
+
+                <button id="closePinGuideBtn" class="apple-btn" style="padding: 0.5em 2em;"></button>
+            </div>
+        </div>
+
+        <div id="button-container" class="button-container">
+            <button id="startBtn2" class="apple-btn"
+                style="background-color: rgb(104, 201, 86);">▶</button>
+            <button id="stopBtn" class="apple-btn" style="display:none; background-color: rgb(232, 77, 61);">⏹️</button>
+            <button id="resumeBtn" class="apple-btn"
+                style="display:none; background-color: rgb(104, 201, 86);">▶️</button>
+            <button id="settingsBtn" class="apple-btn" style="padding: 0; width: 250px;">⚙️</button>
+            <button id="loadTripBtn" class="apple-btn" style="padding: 0; width: 250px;">📂</button>
+        </div>
+        <div id="recap" class="recap-container" style="display:none;">
+            <img id="logo" src="img/Logo.png" alt="CountYourMiles Logo"
+                style="height: 100px; width: 100px; border-radius: 20px;">
+            <h2 id="recapText" style="margin-bottom: 0;"></h2>
+            <h3 id="fromJsonTitle" style="margin-top: 0; margin-bottom : -1em; display: none;"> </h3>
+            <div class="recap-stats">
+                <div class="recap-item" id="fromJson1" style="display: none;">
+                    <span class="recap-label" id="recapStartTimeLabelJson"></span>
+                    <span id="recapStartTimefromJson" class="recap-value" >--:--</span>
+                </div>
+                <div class="recap-item" id="fromJson2" style="display: none;">
+                    <span class="recap-label" id="recapEndTimeLabelJson"></span>
+                    <span id="recapStopTimefromJson" class="recap-value">--:--</span>
+                </div>
+                <br>
+                <div class="recap-item">
+                    <span class="recap-label" id="recapStartTimeLabel"></span>
+                    <br>
+                    <span id="recapStartTime" class="recap-value">--:--</span>
+                </div>
+                <div class="recap-item">
+                    <span class="recap-label" id="recapEndTimeLabel"></span>
+                    <br>
+                    <span id="recapEndTime" class="recap-value">--:--</span>
+                </div>
+                <br>
+                <div class="recap-item">
+                    <span class="recap-label" id="recapDistanceLabel"></span>
+                    <br>
+                    <span id="recapDistance" class="recap-value">0,00 km</span>
+                </div>
+                <div class="recap-item">
+                    <span class="recap-label" id="recapDurationLabel"></span>
+                    <br>
+                    <span id="recapDuration" class="recap-value" style="margin-left: 10px;">00 h 00 min 00 s</span>
+                </div>
+            </div>
+            <button id="photoModeBtn" class="apple-btn" style="background-color: rgb(57, 123, 246); text-align: center;">📷</button>
+            <button id="saveTripBtn" class="apple-btn" style="background-color: rgb(57, 123, 246);">💾</button>
+            <button id="restartBtn" class="apple-btn" style="background-color: rgb(232, 77, 61);">🔄</button>
+        </div>
+    </div>
+
+    <div id="saveTripGuideOverlay" class="overlay-dark" style="display: none;">
+        <div class="guide-menu">
+            <h2 id="saveTripGuideTitle" ></h2>
+            <ul style="font-size: 30px">
+                <li></li>
+                <li></li>
+            </ul>
+            <button id="closeSaveTripGuideBtn" class="apple-btn" style="padding: 0.5em 2em;"></button>
+        </div>
+    </div>
+
+    <div id="photoModeOverlay" style="display:none;"></div>
+
+    <div id="settingsOverlay" class="overlay-dark" style="display: none;">
+        <div id="settingsMenu" class="settings-menu" style="font-size: 0.8em;">
+            <h2 id="settingsMenuTitle">⚙️</h2>
+            <label>
+                <input type="checkbox" id="toggleDarkMode">🌙
+            </label>
+            <label>
+                <input type="radio" name="unit" value="km" id="unitKm" checked> Kilomètres
+                <input type="radio" name="unit" value="miles" id="unitMiles"> Miles
+            </label>
+            <label>
+                <span id="languageLabel"></span>
+                <select id="languageSelector">
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="it">🇮🇹 Italiano</option>
+                    <option value="de">🇩🇪 Deutsch</option>
+                </select>
+            </label>
+            <button id="closeSettingsBtn" class="apple-btn" style="padding: 0.5em 2em;">Fermer</button>
+        </div>
+    </div>
+
+    <div id="errorOverlay" class="overlay-dark" style="display: none;">
+        <div class="error-message">
+            <div id="errorMessage">
+                <h2></h2>
+                <p></p>
+            </div>
+            <button id="closeErrorBtn" class="apple-btn" style="padding: 0.5em 2em;"></button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-image/leaflet-image.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
