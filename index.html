@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A simple and free web application to record and display your trips.">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/Logo.png" type="image/x-icon">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="manifest" href="manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#007aff">
@@ -18,7 +18,7 @@
     <div class="overlay">
         <div id="stats" class="stats">
             <input type="file" id="loadTripInput" style="display:none;" />
-            <img id="logo" src="img/Logo.png" alt="CountYourMiles Logo" style="height: 100px;">
+            <img id="logo" src="img/logo.png" alt="CountYourMiles Logo" style="height: 100px;">
             <span>
                 <span id="distance">🛞 0,00 km</span>
                 <em><span id="startTime" style="display: none;"></span></em>
@@ -37,26 +37,11 @@
                 <h2 id="aboutTitle"></h2>
                 <p id="aboutContent"></p>
                 <p id="aboutAuthor"></p>
-                <class style="text-decoration: underline; font-size: 45x;">
-                    <div id="aboutTextLinks">
-                        <ul>
-                            <a href="./docs/terms-of-use.html">
-                                <li>Terms of Use</li>
-                            </a>
-                            <a href="./docs/privacy-policy.html">
-                                <li>Privacy Policy</li>
-                            </a>
-                            <a href="./docs/copyright.html">
-                                <li>Copyright</li>
-                            </a>
-                        </ul>
-                    </div>
-                </class>
                 <p style="gap: 10px;">
-                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                    <img src="./img/github.png"
                         alt="GitHub Logo" style="height: 30px;">
-                    <a href="https://github.com/ShamuCode/"
-                        style="text-decoration: underline; font-size: 45px;">GitHub</a>
+                    <a href="https://github.com/ShamuCode/CountYourMiles" target="_blank"
+                        style="text-decoration: underline; font-size: 30px;">GitHub</a>
                 </p>
                 <button id="closeAboutBtn" class="apple-btn" style="padding: 0.5em 2em;">Fermer</button>
             </div>
@@ -81,7 +66,7 @@
         </div>
 
         <div id="beforeWeStart" class="overlay-dark" style="display: none;">
-            <div class="guide-menu">
+            <div class="before-menu">
                 <div id="beforeWeStartContent">
                     <h2></h2>
                     <ul>
@@ -130,7 +115,7 @@
             <button id="loadTripBtn" class="apple-btn" style="padding: 0; width: 250px;">📂</button>
         </div>
         <div id="recap" class="recap-container" style="display:none;">
-            <img id="logo" src="img/Logo.png" alt="CountYourMiles Logo"
+            <img id="logo" src="img/logo.png" alt="CountYourMiles Logo"
                 style="height: 100px; width: 100px; border-radius: 20px;">
             <h2 id="recapText" style="margin-bottom: 0;"></h2>
             <h3 id="fromJsonTitle" style="margin-top: 0; margin-bottom : -1em; display: none;"> </h3>
@@ -221,7 +206,7 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-image/leaflet-image.js"></script>
-    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

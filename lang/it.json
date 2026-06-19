@@ -25,9 +25,9 @@
     "content": "CountYourMiles è un'applicazione web gratuita e open source per tracciare i tuoi viaggi a piedi, in bici o in auto.",
     "author": "Creato con 💖 da ShamuLC (ShamuCode)",
     "links": [
-      "<a href='./docs/terms-of-use.html' target='_blank'>Condizioni d'uso</a>",
-      "<a href='./docs/terms-of-use.html' target='_blank'>Politica sulla privacy</a>",
-      "<a href='./docs/copyright.html' target='_blank'>Copyright</a>"
+      "<a href='https://docs.shamulc.com/CountYourMiles/Legal/Terms-of-use.html' target='_blank'>Condizioni d'uso</a>",
+      "<a href='https://docs.shamulc.com/CountYourMiles/Legal/Privacy-policy.html' target='_blank'>Politica sulla privacy</a>",
+      "<a href='https://docs.shamulc.com/CountYourMiles/Legal/Copyright.html' target='_blank'>Copyright</a>"
     ]
   },
   "addToHomeScreenTuto": "Aggiungi il sito alla schermata Home",

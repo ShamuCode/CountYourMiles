@@ -6,11 +6,30 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  
 }
 
 body {
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   background: #f6f8fa;
+}
+
+a {
+  color: #2b6cb0;
+  text-decoration-color: rgba(43, 108, 176, 0.35);
+}
+
+a:hover {
+  color: #1f5b99;
+}
+
+body.dark-mode a {
+  color: #7cc4ff;
+  text-decoration-color: rgba(124, 196, 255, 0.45);
+}
+
+body.dark-mode a:hover {
+  color: #a6d8ff;
 }
 
 body.dark-mode {
@@ -42,8 +61,8 @@ body.dark-mode #map {
   flex-direction: column;
   gap: 1em;
   z-index: 11;
-  width: 90%;
-  max-width: 400px;
+  width: 45%; /* réduit la fenêtre de 50% */
+  max-width: 200px;
   text-align: center;
   color: #ffffff;
 }
@@ -144,7 +163,7 @@ body.dark-mode .stats {
 }
 
 #addToHomeScreenMessage button {
-  font-size: 45px;
+  font-size: 15px;
 }
 
 #beforeWeStart {
@@ -165,6 +184,52 @@ body.dark-mode .stats {
 .guide-menu {
   background: rgba(255, 255, 255, 0.97);
   border-radius: 12px;
+  padding: 1.3em;
+  box-shadow: 0 2px 12px #0002;
+  text-align: center;
+  width: 60%;
+  max-width: 270px;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65em;
+  font-size: 0.67em;
+}
+
+body.dark-mode .guide-menu {
+  background: rgb(38, 38, 38);
+  color: #ffffff;
+}
+
+.guide-menu h2 {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.guide-menu h3 {
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+
+.guide-menu p {
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}
+
+.guide-menu ul {
+  text-align: left;
+  margin: 0.7em 0;
+  padding-left: 1.5em;
+}
+
+.guide-menu li {
+  font-size: 0.6em;
+  margin-bottom: 0.5em;
+}
+
+.before-menu {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 12px;
   padding: 2em;
   box-shadow: 0 2px 12px #0002;
   text-align: center;
@@ -176,42 +241,32 @@ body.dark-mode .stats {
   gap: 1em;
 }
 
-body.dark-mode .guide-menu {
+body.dark-mode .before-menu {
   background: rgb(38, 38, 38);
   color: #ffffff;
 }
 
-.guide-menu h2 {
-  font-size: 1.5em;
-  margin-bottom: 1em;
-}
-
-.guide-menu h3 {
-  font-size: 1.3em;
-  margin-bottom: 0.5em;
-}
-
-.guide-menu p {
+.before-menu h2 {
   font-size: 1.2em;
   margin-bottom: 1em;
 }
 
-.guide-menu ul {
-  text-align: left;
-  margin: 1em 0;
-  padding-left: 1.5em;
-}
-
-.guide-menu li {
+.before-menu h3 {
   font-size: 0.9em;
   margin-bottom: 0.5em;
 }
 
-.guide-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+.before-menu p {
+  font-size: 0.8em;
+  margin-bottom: 1em;
 }
+
+.before-menu ul {
+  text-align: left;
+  margin: 0.7em 0;
+  padding-left: 1.5em;
+}
+
 
 #iosGuide,
 #androidGuide {
@@ -254,7 +309,6 @@ body.dark-mode .apple-btn {
 label {
   cursor: pointer;
   font-weight: 600;
-  color: #ffffff;
   background-color: #e0e0e0;
   color: #000000;
   border-radius: 20px;

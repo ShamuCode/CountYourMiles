@@ -25,9 +25,9 @@
         "content": "CountYourMiles is a free and open-source web application to track your trips on foot, by bike, or by car.",
         "author": "Created with 💖 by ShamuLC (ShamuCode)",
         "links": [
-            "<a href='./docs/terms-of-use.html' target='_blank'>Terms of Use</a>",
-            "<a href='./docs/privacy-policy.html' target='_blank'>Privacy Policy</a>",
-            "<a href='./docs/copyright.html' target='_blank'>Copyright</a>"
+            "<a href='https://docs.shamulc.com/CountYourMiles/Legal/Terms-of-use.html' target='_blank'>Terms of Use</a>",
+            "<a href='https://docs.shamulc.com/CountYourMiles/Legal/Privacy-policy.html' target='_blank'>Privacy Policy</a>",
+            "<a href='https://docs.shamulc.com/CountYourMiles/Legal/Copyright.html' target='_blank'>Copyright</a>"
         ]
     },
     "addToHomeScreenTuto": "Add the website to your Home Screen",

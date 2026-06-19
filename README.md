@@ -1,6 +1,6 @@
 # CountYourMiles
 
-<img src="./img/Banner.png" alt="Logo" style="width:40%;"/>
+<img src="./img/banner.png" alt="Logo" style="width:40%;"/>
 
 *Made with [Apple Summary Slide Template](https://www.figma.com/community/file/1116337874011756261/apple-summary-slide-template)*
 
